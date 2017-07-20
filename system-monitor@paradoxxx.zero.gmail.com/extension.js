@@ -379,7 +379,7 @@ const smMountsMonitor = class SystemMonitor_smMountsMonitor {
         this.connected = false;
 
         this._volumeMonitor = Gio.VolumeMonitor.get();
-        let sys_mounts = ['/home', '/tmp', '/boot', '/usr', '/usr/local'];
+        let sys_mounts = ['/home', '/tmp', '/boot', '/usr'];
         this.base_mounts = ['/'];
         sys_mounts.forEach((sMount) => {
             if (this.is_sys_mount(sMount + '/')) {
